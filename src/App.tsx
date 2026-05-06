@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from 'react'
+import { useMemo, useState, type FormEvent, type ReactNode } from 'react'
 import { createMockAnalysis } from './lib/mockAnalysis'
 import {
   OUTPUT_TYPES,
@@ -311,7 +311,7 @@ function PreviewSection({
   children,
   title,
 }: {
-  children: unknown
+  children: ReactNode
   title: string
 }) {
   return (

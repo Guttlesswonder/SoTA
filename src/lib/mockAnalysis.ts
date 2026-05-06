@@ -159,6 +159,11 @@ export function createMockAnalysis(input: FieldNoteInput): FieldNoteAnalysis {
       Product_Area__c: input.productArea,
       Output_Type__c: input.outputType,
       Summary__c: summary,
+      Stakeholders__c: [
+        contactName,
+        'Account owner',
+        'Customer success manager',
+      ].join('\n'),
       Urgency__c: signals.urgency,
       Sentiment__c: signals.sentiment,
       Pain_Points__c: signals.painPoints.join('\n'),
@@ -168,6 +173,7 @@ export function createMockAnalysis(input: FieldNoteInput): FieldNoteAnalysis {
       Missing_Information__c: signals.missingInformation.join('\n'),
       Recommended_Next_Steps__c: signals.recommendedNextSteps.join('\n'),
       Review_Status__c: reviewStatus,
+      Raw_Input__c: input.rawNotes,
     },
     rawInput: {
       ...input,

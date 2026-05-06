@@ -46,6 +46,7 @@ export type FieldNoteInput = {
 }
 
 export type SalesforceFieldMap = {
+  /** Field_Note__c.Name */
   Name: string
   Account_Name__c: string
   Contact_Name__c: string
@@ -53,6 +54,7 @@ export type SalesforceFieldMap = {
   Product_Area__c: ProductArea
   Output_Type__c: OutputType
   Summary__c: string
+  Stakeholders__c: string
   Urgency__c: Urgency
   Sentiment__c: Sentiment
   Pain_Points__c: string
@@ -62,6 +64,7 @@ export type SalesforceFieldMap = {
   Missing_Information__c: string
   Recommended_Next_Steps__c: string
   Review_Status__c: ReviewStatus
+  Raw_Input__c: string
 }
 
 export type FieldNoteAnalysis = {
