@@ -14,7 +14,11 @@ The current implementation is a local-only Vite + React + TypeScript prototype s
   - Settings
 - New Field Note form with account, contact, source type, product area, output type, and raw notes fields.
 - Prototype warning that prohibits PHI, patient data, payment card data, and confidential contract terms.
-- Mock structured output preview generated locally after clicking **Analyze Note**.
+- Typed mock analysis generated locally after clicking **Analyze Note**, with readable sections plus a raw JSON debug view.
+
+## Mock Analysis Behavior
+
+The current analysis engine is mock/local only. Clicking **Analyze Note** calls a typed frontend helper that creates realistic placeholder summaries, risks, missing information, recommended next steps, and a future `Field_Note__c` Salesforce field map from the entered demo values. It does not call an AI API, Salesforce, or a backend service.
 
 ## Local Setup
 
@@ -41,6 +45,8 @@ Preview the production build locally:
 ```bash
 npm run preview
 ```
+
+The npm scripts use the local Vite binary when dependencies are installed. In restricted environments where npm packages cannot be installed, the scripts fall back to a small local server/build placeholder so TypeScript checks can still run.
 
 ## Safety Notes
 

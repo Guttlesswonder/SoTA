@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "node scripts/run-vite-or-fallback.mjs dev",
+    "build": "node scripts/run-vite-or-fallback.mjs build",
+    "preview": "node scripts/run-vite-or-fallback.mjs preview"
   },
   "dependencies": {
     "react": "latest",
